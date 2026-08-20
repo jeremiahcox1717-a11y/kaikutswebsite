@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header);
 }
 
 body {
@@ -159,8 +160,7 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 56px 20px 80px;
-  overflow-x: clip;
+  padding: 36px 20px 48px;
 }
 
 .kicker {
@@ -182,89 +182,19 @@ button {
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 6vw, 3.8rem);
-  margin-bottom: 36px;
-}
-
-.cut-stage {
-  position: relative;
-  width: min(820px, 100%);
-  display: grid;
-  place-items: center;
-  margin: 0 0 36px;
-  padding: 42px 72px;
-}
-
-.cut-collage {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.cut-collage img {
-  position: absolute;
-  width: 31%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border: 0;
-  border-radius: 16px;
-  opacity: 0.82;
-  filter: brightness(0.92) contrast(1.05) saturate(1.02);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
-}
-
-.cut-collage img:nth-child(1) {
-  top: 0;
-  left: 2%;
-  object-position: center 20%;
-  transform: rotate(-11deg);
-}
-
-.cut-collage img:nth-child(2) {
-  top: -2%;
-  right: 3%;
-  object-position: center 15%;
-  transform: rotate(9deg);
-}
-
-.cut-collage img:nth-child(3) {
-  top: 36%;
-  left: -2%;
-  object-position: center 25%;
-  transform: rotate(-6deg);
-}
-
-.cut-collage img:nth-child(4) {
-  top: 34%;
-  right: -3%;
-  object-position: center 18%;
-  transform: rotate(7deg);
-}
-
-.cut-collage img:nth-child(5) {
-  bottom: 0;
-  left: 8%;
-  object-position: center 22%;
-  transform: rotate(8deg);
-}
-
-.cut-collage img:nth-child(6) {
-  bottom: -1%;
-  right: 6%;
-  object-position: center 16%;
-  transform: rotate(-8deg);
+  font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+  margin-bottom: 24px;
 }
 
 .cut-frame {
   position: relative;
-  z-index: 2;
-  width: min(480px, 72%);
+  width: min(320px, 78%);
   aspect-ratio: 1;
-  margin: 0;
+  margin: 0 0 24px;
   overflow: hidden;
   border-radius: var(--radius);
   background: #000;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
 .cut-slideshow,
@@ -383,6 +313,26 @@ button {
   color: var(--bg) !important;
 }
 
+.work-pages {
+  display: grid;
+  gap: 0;
+  scroll-margin-top: var(--header);
+}
+
+.work-pages figure {
+  margin: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: #000;
+}
+
+.work-pages img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
 .ig-link-card {
   margin-top: 2px;
   font-size: 1.05rem;
@@ -395,7 +345,7 @@ button {
 
 .services,
 .visit {
-  padding: 24px 0 80px;
+  padding: 64px 0 80px;
 }
 
 .section-head {
@@ -751,21 +701,8 @@ body.nav-open {
     grid-template-columns: 1fr;
   }
 
-  .cut-stage {
-    padding: 30px 40px;
-  }
-
-  .cut-collage img {
-    width: 33%;
-  }
-
-  .cut-collage img:nth-child(3),
-  .cut-collage img:nth-child(4) {
-    display: none;
-  }
-
   .cut-frame {
-    width: min(440px, 78%);
+    width: min(280px, 72%);
   }
 
   .nav-toggle {
