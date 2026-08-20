@@ -1,22 +1,22 @@
 :root {
-  --ink: #000;
-  --ink-2: #0a0a0a;
-  --ink-3: #141414;
-  --navy: #111;
-  --bone: #fff;
-  --bone-soft: #d4d4d4;
-  --muted: #8a8a8a;
-  --gold: #fff;
-  --gold-2: #fff;
-  --gold-ink: #000;
-  --line: rgba(255, 255, 255, 0.14);
-  --line-strong: rgba(255, 255, 255, 0.34);
-  --shadow: 0 28px 70px rgba(0, 0, 0, 0.55);
+  --ink: #12161f;
+  --ink-2: #181d29;
+  --ink-3: #1f2533;
+  --navy: #101624;
+  --bone: #f3ead9;
+  --bone-soft: #d8cdba;
+  --muted: #9a907e;
+  --gold: #c9a45a;
+  --gold-2: #e2c57a;
+  --gold-ink: #1a1408;
+  --line: rgba(201, 164, 90, 0.2);
+  --line-strong: rgba(201, 164, 90, 0.42);
+  --shadow: 0 28px 70px rgba(8, 10, 16, 0.45);
   --radius: 2px;
   --header: 76px;
-  --font-display: "Cinzel", serif;
-  --font-ui: "Oswald", sans-serif;
-  --font-body: "Manrope", sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
   --hero-cycle: 24s;
 }
 
@@ -32,11 +32,13 @@ html {
 
 body {
   margin: 0;
-  background: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(201, 164, 90, 0.08), transparent 55%),
+    var(--ink);
   color: var(--bone);
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   min-height: 100vh;
 }
 
@@ -53,8 +55,8 @@ a {
 .about-copy a,
 .visit-card a,
 .strip-item a {
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--gold-2);
+  border-bottom: 1px solid rgba(201, 164, 90, 0.4);
 }
 
 .about-copy a:hover,
@@ -80,7 +82,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: 50;
-  opacity: 0.05;
+  opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -89,7 +91,7 @@ button {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(16px);
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(18, 22, 31, 0.86);
   border-bottom: 1px solid var(--line);
 }
 
@@ -119,15 +121,17 @@ button {
 }
 
 .logo-mark {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border: 1px solid var(--gold);
   color: var(--gold-2);
   font-family: var(--font-display);
   font-weight: 700;
+  font-size: 1.15rem;
   letter-spacing: 0.04em;
+  background: rgba(201, 164, 90, 0.08);
 }
 
 .logo-text {
@@ -171,9 +175,10 @@ button {
 }
 
 .nav-cta {
-  padding: 10px 16px;
+  padding: 10px 18px;
   border: 1px solid var(--gold);
-  color: var(--gold-2) !important;
+  color: var(--gold-ink) !important;
+  background: var(--gold);
 }
 
 .nav-toggle {
@@ -201,7 +206,7 @@ button {
   padding: 0;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
-  background: #000;
+  background: var(--navy);
 }
 
 .hero-slideshow {
@@ -217,7 +222,6 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center 18%;
-  filter: grayscale(1) contrast(1.08);
   opacity: 0;
   animation: heroFade var(--hero-cycle) infinite both;
 }
@@ -254,10 +258,11 @@ button {
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.28) 0%,
-    rgba(0, 0, 0, 0.12) 40%,
-    rgba(0, 0, 0, 0.72) 100%
+    rgba(18, 22, 31, 0.2) 0%,
+    rgba(18, 22, 31, 0.08) 38%,
+    rgba(18, 22, 31, 0.78) 100%
   );
+  box-shadow: inset 0 0 0 1px rgba(201, 164, 90, 0.18);
 }
 
 .hero-copy {
@@ -284,7 +289,7 @@ button {
 .hero-dots span {
   width: 9px;
   height: 9px;
-  border: 1px solid #fff;
+  border: 1px solid var(--gold);
   border-radius: 50%;
   background: transparent;
   animation: heroDot var(--hero-cycle) infinite both;
@@ -300,7 +305,7 @@ button {
 @keyframes heroDot {
   0%,
   16.6% {
-    background: #fff;
+    background: var(--gold);
   }
   16.7%,
   100% {
@@ -327,8 +332,8 @@ button {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 0.95;
+  letter-spacing: 0.01em;
+  line-height: 0.92;
 }
 
 .hero h1 {
@@ -419,12 +424,6 @@ button {
   object-position: center 20%;
 }
 
-.portrait img,
-.fade-slide img,
-.work-fader img {
-  filter: grayscale(1) contrast(1.08);
-}
-
 .strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -493,6 +492,7 @@ button {
   min-height: 460px;
   overflow: hidden;
   border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow);
 }
 
 .portrait img {
@@ -533,6 +533,11 @@ button {
   padding: 22px 22px 20px;
   background: var(--ink-2);
   border: 1px solid var(--line);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: var(--gold);
 }
 
 .service-card h3 {
@@ -823,9 +828,10 @@ button {
 }
 
 .visit-card {
-  padding: 24px;
+  padding: 26px 24px;
   background: var(--ink-2);
   border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(8, 10, 16, 0.18);
 }
 
 .visit-card h3 {
@@ -950,7 +956,7 @@ body.nav-open {
     flex-direction: column;
     gap: 22px;
     padding: 32px 24px;
-    background: rgba(0, 0, 0, 0.96);
+    background: rgba(18, 22, 31, 0.97);
   }
 
   body.nav-open .site-nav {
