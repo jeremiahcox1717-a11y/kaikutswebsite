@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kai Kuts — Barbering</title>
+    <meta
+      name="description"
+      content="Kai Kuts barbering. Precision cuts, clean fades, and a chair that never feels rushed. Book your seat."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true">K</span>
+          <span class="logo-text">
+            <span>Kai Kuts</span>
+            <small>Barbering</small>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#visit">Visit</a>
+          <a class="nav-cta" href="#book">Book</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span>One chair.</span>
+            <span>No rush.</span>
+            <span>Placeholder studio</span>
+          </p>
+          <h1>
+            Sharp lines.<br />
+            Clean fades.<br />
+            <em>Kai Kuts.</em>
+          </h1>
+          <p class="lede">
+            A barbering site ready for his photos, hours, and prices. Swap the
+            placeholders when they land — the booking chair is already built.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#book">Book a chair</a>
+            <a class="btn btn-ghost" href="#services">See the menu</a>
+          </div>
+        </div>
+        <figure class="hero-frame photo-slot" data-slot="hero">
+          <div class="photo-slot-inner">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path
+                d="M18 10h8l4 8H22l-4-8zm20 0h8l-4 8h-8l4-8zM14 22h36v4H14v-4zm6 10h24v22H20V32z"
+              />
+            </svg>
+            <figcaption>
+              Hero photo coming soon
+              <span>Drop his shop or chair shot here</span>
+            </figcaption>
+          </div>
+        </figure>
+      </section>
+
+      <section class="strip" aria-label="Shop snapshot">
+        <div class="strip-item">
+          <span>Hours</span>
+          <strong data-hours-summary>Tue–Sat · hours TBD</strong>
+        </div>
+        <div class="strip-item">
+          <span>Location</span>
+          <strong>Address coming soon</strong>
+        </div>
+        <div class="strip-item">
+          <span>Booking</span>
+          <strong>Request a seat below</strong>
+        </div>
+        <div class="strip-item">
+          <span>Walk-ins</span>
+          <strong>Policy TBD</strong>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="section-head">
+          <p class="eyebrow">The chair</p>
+          <h2>Built around the cut, not the crowd.</h2>
+        </div>
+        <div class="about-grid">
+          <figure class="portrait photo-slot" data-slot="portrait">
+            <div class="photo-slot-inner">
+              <span class="slot-label">Barber portrait</span>
+              <figcaption>His photo goes here</figcaption>
+            </div>
+          </figure>
+          <div class="about-copy">
+            <p>
+              Kai Kuts is a placeholder name pulled from this repo until we
+              have the real shop details. The tone is already set: precise
+              work, a calm chair, and a booking flow that respects people’s
+              time.
+            </p>
+            <p>
+              When his bio, city, and photos arrive, drop them into the marked
+              slots. Services, prices, hours, and contact all live in one
+              config at the top of <code>script.js</code>.
+            </p>
+            <ul class="about-points">
+              <li>Fades, tapers, and classic cuts</li>
+              <li>Beard work and lining</li>
+              <li>Kids cuts and tidy-ups</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-head">
+          <p class="eyebrow">The menu</p>
+          <h2>Services &amp; placeholder prices</h2>
+          <p>Swap these once the real list comes in. Times drive the booking slots.</p>
+        </div>
+        <div class="service-grid" id="service-grid"></div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="section-head">
+          <p class="eyebrow">The work</p>
+          <h2>Gallery slots for his cuts</h2>
+        </div>
+        <div class="gallery">
+          <figure class="photo-slot tall" data-slot="cut-1">
+            <div class="photo-slot-inner">
+              <span>Cut 01</span>
+            </div>
+          </figure>
+          <figure class="photo-slot" data-slot="cut-2">
+            <div class="photo-slot-inner">
+              <span>Cut 02</span>
+            </div>
+          </figure>
+          <figure class="photo-slot" data-slot="cut-3">
+            <div class="photo-slot-inner">
+              <span>Cut 03</span>
+            </div>
+          </figure>
+          <figure class="photo-slot wide" data-slot="cut-4">
+            <div class="photo-slot-inner">
+              <span>Shop / details 04</span>
+            </div>
+          </figure>
+          <figure class="photo-slot" data-slot="cut-5">
+            <div class="photo-slot-inner">
+              <span>Cut 05</span>
+            </div>
+          </figure>
+          <figure class="photo-slot" data-slot="cut-6">
+            <div class="photo-slot-inner">
+              <span>Cut 06</span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="booking" id="book">
+        <div class="booking-intro">
+          <p class="eyebrow">The book</p>
+          <h2>Reserve the chair</h2>
+          <p>
+            Pick a service, a day, and a time. Requests stay on this device for
+            now — easy to swap for Booksy, Square, or his phone number later.
+          </p>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <fieldset class="step">
+            <legend>1. Service</legend>
+            <div class="book-services" id="book-services" role="list"></div>
+            <p class="field-error" data-error-for="service"></p>
+          </fieldset>
+
+          <div class="booking-split">
+            <fieldset class="step">
+              <legend>2. Date</legend>
+              <div class="calendar" id="calendar">
+                <div class="calendar-head">
+                  <button type="button" id="cal-prev" aria-label="Previous month">
+                    ‹
+                  </button>
+                  <h3 id="cal-label"></h3>
+                  <button type="button" id="cal-next" aria-label="Next month">
+                    ›
+                  </button>
+                </div>
+                <div class="calendar-weekdays" aria-hidden="true">
+                  <span>Su</span><span>Mo</span><span>Tu</span><span>We</span>
+                  <span>Th</span><span>Fr</span><span>Sa</span>
+                </div>
+                <div class="calendar-days" id="cal-days"></div>
+              </div>
+              <p class="field-error" data-error-for="date"></p>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend>3. Time</legend>
+              <p class="slot-hint" id="slot-hint">Choose a date to see times.</p>
+              <div class="time-slots" id="time-slots"></div>
+              <p class="field-error" data-error-for="time"></p>
+            </fieldset>
+          </div>
+
+          <fieldset class="step">
+            <legend>4. Your details</legend>
+            <div class="fields">
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Phone
+                <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
+              <label class="full">
+                Email <span class="optional">(optional)</span>
+                <input type="email" name="email" autocomplete="email" />
+              </label>
+              <label class="full">
+                Notes <span class="optional">(optional)</span>
+                <textarea
+                  name="notes"
+                  rows="3"
+                  placeholder="Fade preference, beard work, kid’s age…"
+                ></textarea>
+              </label>
+            </div>
+            <p class="field-error" data-error-for="details"></p>
+          </fieldset>
+
+          <div class="booking-foot">
+            <p class="summary" id="booking-summary">Select a service to start.</p>
+            <button class="btn btn-primary" type="submit">Request booking</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="section-head">
+          <p class="eyebrow">The shop</p>
+          <h2>Hours, place, contact</h2>
+        </div>
+        <div class="visit-grid">
+          <div class="visit-card">
+            <h3>Hours</h3>
+            <ul class="hours-list" id="hours-list"></ul>
+          </div>
+          <div class="visit-card">
+            <h3>Find us</h3>
+            <p class="placeholder-line">Street address coming soon</p>
+            <p class="placeholder-line">City, state, zip coming soon</p>
+            <p class="muted">Map embed can go here later.</p>
+          </div>
+          <div class="visit-card">
+            <h3>Contact</h3>
+            <p class="placeholder-line">Phone coming soon</p>
+            <p class="placeholder-line">Instagram coming soon</p>
+            <p class="muted">Email / booking app link coming soon</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">K</span>
+        <div>
+          <strong>Kai Kuts</strong>
+          <p>Placeholder shop info until the real details arrive.</p>
+        </div>
+      </div>
+      <p class="copyright">© <span id="year"></span> Kai Kuts</p>
+    </footer>
+
+    <div class="modal" id="confirm-modal" hidden>
+      <div class="modal-card" role="dialog" aria-labelledby="confirm-title" aria-modal="true">
+        <p class="eyebrow">You’re on the book</p>
+        <h2 id="confirm-title">Request saved</h2>
+        <p id="confirm-body"></p>
+        <button class="btn btn-primary" type="button" id="confirm-close">
+          Back to the site
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
