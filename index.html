@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=bw1" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -50,9 +50,14 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-fader fade-stage" data-fader data-interval="4800" aria-hidden="true">
-          <div class="fade-slides" id="hero-slides"></div>
+      <section class="hero" aria-label="Haircut gallery">
+        <div class="hero-slideshow" aria-hidden="true">
+          <img src="images/cut-01.jpg" alt="" />
+          <img src="images/cut-02.jpg" alt="" />
+          <img src="images/cut-03.jpg" alt="" />
+          <img src="images/cut-04.jpg" alt="" />
+          <img src="images/cut-05.jpg" alt="" />
+          <img src="images/cut-06.jpg" alt="" />
         </div>
         <div class="hero-veil" aria-hidden="true"></div>
         <div class="hero-copy">
@@ -67,13 +72,16 @@
             <em>Kai Kuts.</em>
           </h1>
           <p class="lede">
-            Precision barbering in a dark gold chair. Tight blends, patient
-            lining, and a book that respects your time.
+            Precision barbering. Tight blends, patient lining, and a book that
+            respects your time.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#book">Book an Appointment</a>
             <a class="btn btn-ghost" href="#work">See the cuts</a>
           </div>
+        </div>
+        <div class="hero-dots" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
       </section>
 
@@ -303,6 +311,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=bw1"></script>
   </body>
 </html>

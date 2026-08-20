@@ -142,20 +142,9 @@ function init() {
 }
 
 function initFaders() {
-  const heroSlides = document.getElementById("hero-slides");
   const workSlides = document.getElementById("work-slides");
   const workDots = document.getElementById("work-dots");
   const workCaption = document.getElementById("work-caption");
-
-  if (heroSlides) {
-    heroSlides.innerHTML = GALLERY.map(
-      (shot, index) => `
-        <div class="fade-slide${index === 0 ? " is-active" : ""}">
-          <img src="${shot.src}" alt="" />
-        </div>
-      `
-    ).join("");
-  }
 
   if (workSlides) {
     workSlides.innerHTML = GALLERY.map(
