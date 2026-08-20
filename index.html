@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kai Kuts — Barbering</title>
+    <title>Kai Kuts — Precision Fades</title>
     <meta
       name="description"
-      content="Kai Kuts barbering. Precision cuts, clean fades, and a chair that never feels rushed. Book your seat."
+      content="Kai Kuts. Skin fades, burst fades, and clean line-ups. Book an appointment."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
           <span class="logo-mark" aria-hidden="true">K</span>
           <span class="logo-text">
             <span>Kai Kuts</span>
-            <small>Barbering</small>
+            <small>kai.kut.it</small>
           </span>
         </a>
         <button
@@ -44,18 +44,22 @@
           <a href="#services">Services</a>
           <a href="#work">Work</a>
           <a href="#visit">Visit</a>
-          <a class="nav-cta" href="#book">Book</a>
+          <a class="nav-cta" href="#book">Book an Appointment</a>
         </nav>
       </div>
     </header>
 
     <main>
       <section class="hero">
+        <div class="hero-fader fade-stage" data-fader data-interval="4800" aria-hidden="true">
+          <div class="fade-slides" id="hero-slides"></div>
+        </div>
+        <div class="hero-veil" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow">
-            <span>One chair.</span>
-            <span>No rush.</span>
-            <span>Placeholder studio</span>
+            <span>Skin fades</span>
+            <span>Burst fades</span>
+            <span>By appointment</span>
           </p>
           <h1>
             Sharp lines.<br />
@@ -63,74 +67,65 @@
             <em>Kai Kuts.</em>
           </h1>
           <p class="lede">
-            A barbering site ready for his photos, hours, and prices. Swap the
-            placeholders when they land — the booking chair is already built.
+            Precision barbering in a dark gold chair. Tight blends, patient
+            lining, and a book that respects your time.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#book">Book a chair</a>
-            <a class="btn btn-ghost" href="#services">See the menu</a>
+            <a class="btn btn-primary" href="#book">Book an Appointment</a>
+            <a class="btn btn-ghost" href="#work">See the cuts</a>
           </div>
         </div>
-        <figure class="hero-frame photo-slot" data-slot="hero">
-          <div class="photo-slot-inner">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <path
-                d="M18 10h8l4 8H22l-4-8zm20 0h8l-4 8h-8l4-8zM14 22h36v4H14v-4zm6 10h24v22H20V32z"
-              />
-            </svg>
-            <figcaption>
-              Hero photo coming soon
-              <span>Drop his shop or chair shot here</span>
-            </figcaption>
-          </div>
-        </figure>
       </section>
 
       <section class="strip" aria-label="Shop snapshot">
         <div class="strip-item">
           <span>Hours</span>
-          <strong data-hours-summary>Tue–Sat · hours TBD</strong>
+          <strong data-hours-summary>Tue–Sat</strong>
         </div>
         <div class="strip-item">
-          <span>Location</span>
-          <strong>Address coming soon</strong>
+          <span>Studio</span>
+          <strong>Appointment only</strong>
+        </div>
+        <div class="strip-item">
+          <span>Instagram</span>
+          <strong>
+            <a href="https://www.instagram.com/kai.kut.it/" target="_blank" rel="noreferrer"
+              >@kai.kut.it</a
+            >
+          </strong>
         </div>
         <div class="strip-item">
           <span>Booking</span>
-          <strong>Request a seat below</strong>
-        </div>
-        <div class="strip-item">
-          <span>Walk-ins</span>
-          <strong>Policy TBD</strong>
+          <strong>Book an appointment below</strong>
         </div>
       </section>
 
       <section class="about" id="about">
         <div class="section-head">
           <p class="eyebrow">The chair</p>
-          <h2>Built around the cut, not the crowd.</h2>
+          <h2>Built around the fade, not the crowd.</h2>
         </div>
         <div class="about-grid">
-          <figure class="portrait photo-slot" data-slot="portrait">
-            <div class="photo-slot-inner">
-              <span class="slot-label">Barber portrait</span>
-              <figcaption>His photo goes here</figcaption>
-            </div>
+          <figure class="portrait">
+            <img
+              src="images/cut-01.jpg"
+              alt="Burst fade pompadour with a clean skin blend in the navy and gold shop"
+            />
           </figure>
           <div class="about-copy">
             <p>
-              Kai Kuts is a placeholder name pulled from this repo until we
-              have the real shop details. The tone is already set: precise
-              work, a calm chair, and a booking flow that respects people’s
-              time.
+              Kai Kuts is a fade-first chair. Burst fades, skin fades, tapers,
+              and line-ups cut with a slow hand — no rush, no assembly line.
             </p>
             <p>
-              When his bio, city, and photos arrive, drop them into the marked
-              slots. Services, prices, hours, and contact all live in one
-              config at the top of <code>script.js</code>.
+              The work lives on
+              <a href="https://www.instagram.com/kai.kut.it/" target="_blank" rel="noreferrer"
+                >@kai.kut.it</a
+              >. Community cuts when they matter. Appointments for everything
+              else.
             </p>
             <ul class="about-points">
-              <li>Fades, tapers, and classic cuts</li>
+              <li>Skin fades, burst fades, and tapers</li>
               <li>Beard work and lining</li>
               <li>Kids cuts and tidy-ups</li>
             </ul>
@@ -141,8 +136,8 @@
       <section class="services" id="services">
         <div class="section-head">
           <p class="eyebrow">The menu</p>
-          <h2>Services &amp; placeholder prices</h2>
-          <p>Swap these once the real list comes in. Times drive the booking slots.</p>
+          <h2>Services</h2>
+          <p>Times below drive the appointment slots. Ask if you need something not listed.</p>
         </div>
         <div class="service-grid" id="service-grid"></div>
       </section>
@@ -150,49 +145,38 @@
       <section class="work" id="work">
         <div class="section-head">
           <p class="eyebrow">The work</p>
-          <h2>Gallery slots for his cuts</h2>
+          <h2>Recent fades</h2>
+          <p>A rotating look at the chair — skin fades, tapers, and texture.</p>
         </div>
-        <div class="gallery">
-          <figure class="photo-slot tall" data-slot="cut-1">
-            <div class="photo-slot-inner">
-              <span>Cut 01</span>
-            </div>
-          </figure>
-          <figure class="photo-slot" data-slot="cut-2">
-            <div class="photo-slot-inner">
-              <span>Cut 02</span>
-            </div>
-          </figure>
-          <figure class="photo-slot" data-slot="cut-3">
-            <div class="photo-slot-inner">
-              <span>Cut 03</span>
-            </div>
-          </figure>
-          <figure class="photo-slot wide" data-slot="cut-4">
-            <div class="photo-slot-inner">
-              <span>Shop / details 04</span>
-            </div>
-          </figure>
-          <figure class="photo-slot" data-slot="cut-5">
-            <div class="photo-slot-inner">
-              <span>Cut 05</span>
-            </div>
-          </figure>
-          <figure class="photo-slot" data-slot="cut-6">
-            <div class="photo-slot-inner">
-              <span>Cut 06</span>
-            </div>
-          </figure>
+
+        <div
+          class="work-fader fade-stage"
+          data-fader
+          data-interval="5200"
+          aria-roledescription="carousel"
+          aria-label="Haircut gallery"
+        >
+          <div class="fade-slides" id="work-slides"></div>
+          <p class="fade-caption" id="work-caption"></p>
+          <div class="fade-controls">
+            <button type="button" class="fade-nav" data-fader-prev aria-label="Previous cut">
+              ‹
+            </button>
+            <div class="fade-dots" id="work-dots"></div>
+            <button type="button" class="fade-nav" data-fader-next aria-label="Next cut">
+              ›
+            </button>
+          </div>
         </div>
       </section>
 
       <section class="booking" id="book">
         <div class="booking-intro">
           <p class="eyebrow">The book</p>
-          <h2>Reserve the chair</h2>
+          <h2>Book an appointment</h2>
           <p>
             Pick a service, a day, and a time. Requests stay on this device for
-            now — easy to swap for Booksy, Square, or his phone number later.
+            now — easy to swap for Booksy, Square, or a phone confirm later.
           </p>
         </div>
 
@@ -262,7 +246,7 @@
 
           <div class="booking-foot">
             <p class="summary" id="booking-summary">Select a service to start.</p>
-            <button class="btn btn-primary" type="submit">Request booking</button>
+            <button class="btn btn-primary" type="submit">Book an Appointment</button>
           </div>
         </form>
       </section>
@@ -281,13 +265,17 @@
             <h3>Find us</h3>
             <p class="placeholder-line">Street address coming soon</p>
             <p class="placeholder-line">City, state, zip coming soon</p>
-            <p class="muted">Map embed can go here later.</p>
+            <p class="muted">Appointment only until the shop pin lands.</p>
           </div>
           <div class="visit-card">
             <h3>Contact</h3>
+            <p>
+              <a href="https://www.instagram.com/kai.kut.it/" target="_blank" rel="noreferrer"
+                >Instagram @kai.kut.it</a
+              >
+            </p>
             <p class="placeholder-line">Phone coming soon</p>
-            <p class="placeholder-line">Instagram coming soon</p>
-            <p class="muted">Email / booking app link coming soon</p>
+            <p class="muted">DM the book if you need a time that isn’t listed.</p>
           </div>
         </div>
       </section>
@@ -298,16 +286,16 @@
         <span class="logo-mark" aria-hidden="true">K</span>
         <div>
           <strong>Kai Kuts</strong>
-          <p>Placeholder shop info until the real details arrive.</p>
+          <p>Precision fades. Book an appointment.</p>
         </div>
       </div>
-      <p class="copyright">© <span id="year"></span> Kai Kuts</p>
+      <p class="copyright">© <span id="year"></span> Kai Kuts · @kai.kut.it</p>
     </footer>
 
     <div class="modal" id="confirm-modal" hidden>
       <div class="modal-card" role="dialog" aria-labelledby="confirm-title" aria-modal="true">
         <p class="eyebrow">You’re on the book</p>
-        <h2 id="confirm-title">Request saved</h2>
+        <h2 id="confirm-title">Appointment requested</h2>
         <p id="confirm-body"></p>
         <button class="btn btn-primary" type="button" id="confirm-close">
           Back to the site
