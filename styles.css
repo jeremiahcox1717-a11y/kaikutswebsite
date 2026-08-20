@@ -1,11 +1,11 @@
 :root {
-  --bg: #0a0a0b;
-  --bg-2: #121214;
-  --card: #161618;
-  --text: #f4f4f5;
-  --muted: #a1a1aa;
-  --line: #2a2a2e;
-  --white: #fafafa;
+  --bg: #000;
+  --bg-2: #000;
+  --card: #000;
+  --text: #fff;
+  --muted: #d0d0d0;
+  --line: #fff;
+  --white: #fff;
   --header: 68px;
   --font: "DM Sans", system-ui, sans-serif;
   --cycle: 24s;
@@ -63,9 +63,9 @@ button {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(10, 10, 11, 0.8);
+  background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1.5px solid #fff;
 }
 
 .header-inner {
@@ -100,8 +100,9 @@ button {
 .nav-cta {
   padding: 9px 16px;
   border-radius: 999px;
-  background: var(--white);
-  color: var(--bg) !important;
+  border: 1.5px solid #fff;
+  background: transparent;
+  color: #fff !important;
   font-weight: 600;
   font-size: 0.86rem;
 }
@@ -161,7 +162,8 @@ button {
   overflow: hidden;
   border-radius: var(--radius);
   background: #000;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #000, 0 24px 60px rgba(255, 255, 255, 0.08);
 }
 
 .cut-slideshow,
@@ -175,6 +177,7 @@ button {
 .cut-slideshow img {
   object-fit: cover;
   object-position: center 18%;
+  filter: brightness(1.08) contrast(1.06) saturate(1.05);
   opacity: 0;
   animation: fade var(--cycle) infinite both;
 }
@@ -240,10 +243,10 @@ button {
   justify-content: center;
   min-height: 48px;
   padding: 0 22px;
-  border: 0;
+  border: 1.5px solid #fff;
   border-radius: 999px;
-  background: var(--white);
-  color: var(--bg);
+  background: #fff;
+  color: #000;
   font-weight: 650;
   font-size: 0.92rem;
 }
@@ -280,7 +283,7 @@ button {
   gap: 6px 16px;
   padding: 20px 22px;
   background: var(--card);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 18px;
 }
 
@@ -307,7 +310,7 @@ button {
 
 .booking-card {
   background: var(--card);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 28px;
   padding: clamp(24px, 4vw, 44px);
 }
@@ -347,7 +350,7 @@ button {
   text-align: left;
   padding: 16px;
   background: var(--bg-2);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 16px;
 }
 
@@ -382,7 +385,7 @@ button {
 
 .calendar {
   background: var(--bg-2);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 18px;
   padding: 16px;
 }
@@ -402,7 +405,7 @@ button {
 .calendar-head button {
   width: 36px;
   height: 36px;
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 50%;
   background: transparent;
 }
@@ -439,7 +442,7 @@ button {
 
 .time-slot {
   min-height: 42px;
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 12px;
   background: var(--bg-2);
 }
@@ -479,7 +482,7 @@ button {
   width: 100%;
   padding: 12px 14px;
   background: var(--bg-2);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 12px;
 }
 
@@ -518,7 +521,7 @@ button {
 .visit-card {
   padding: 22px;
   background: var(--card);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 18px;
 }
 
@@ -529,7 +532,7 @@ button {
 
 .visit-card a {
   color: var(--text);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1.5px solid #fff;
 }
 
 .hours-list {
@@ -551,7 +554,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding: 20px 0 48px;
-  border-top: 1px solid var(--line);
+  border-top: 1.5px solid #fff;
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -574,7 +577,7 @@ button {
   width: min(440px, 100%);
   padding: 28px;
   background: var(--card);
-  border: 1px solid var(--line);
+  border: 1.5px solid #fff;
   border-radius: 24px;
 }
 
