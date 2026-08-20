@@ -16,14 +16,28 @@ const SHOP = {
       name: "Skin fade",
       minutes: 45,
       price: 35,
-      blurb: "Tight blend, clean line. Placeholder price.",
+      blurb: "Tight blend down to the skin, clean lineup.",
     },
     {
-      id: "classic-cut",
-      name: "Classic cut",
-      minutes: 30,
-      price: 30,
-      blurb: "Scissor work and a tidy finish.",
+      id: "burst-fade",
+      name: "Burst fade",
+      minutes: 45,
+      price: 40,
+      blurb: "Curved fade around the ear. High volume on top.",
+    },
+    {
+      id: "taper",
+      name: "Taper + texture",
+      minutes: 35,
+      price: 32,
+      blurb: "Low or mid taper with scissor work on top.",
+    },
+    {
+      id: "cut-beard",
+      name: "Cut + beard",
+      minutes: 60,
+      price: 50,
+      blurb: "Full chair. Fade or taper with beard shape.",
     },
     {
       id: "beard",
@@ -33,28 +47,47 @@ const SHOP = {
       blurb: "Line-up, shape, and oil.",
     },
     {
-      id: "cut-beard",
-      name: "Cut + beard",
-      minutes: 60,
-      price: 50,
-      blurb: "Full chair. Cut and beard together.",
-    },
-    {
       id: "kids",
       name: "Kids cut",
       minutes: 30,
       price: 25,
-      blurb: "Placeholder — confirm age policy later.",
-    },
-    {
-      id: "shave",
-      name: "Hot towel shave",
-      minutes: 30,
-      price: 35,
-      blurb: "Classic straight-razor service.",
+      blurb: "Short sits, clean finishes.",
     },
   ],
 };
+
+const GALLERY = [
+  {
+    src: "images/cut-01.jpg",
+    alt: "Burst fade in the shop",
+    caption: "Burst fade",
+  },
+  {
+    src: "images/cut-02.jpg",
+    alt: "Skin fade, side profile",
+    caption: "Skin fade",
+  },
+  {
+    src: "images/cut-03.jpg",
+    alt: "Low taper from the back",
+    caption: "Low taper",
+  },
+  {
+    src: "images/cut-04.jpg",
+    alt: "Low taper lineup",
+    caption: "Lineup",
+  },
+  {
+    src: "images/cut-05.jpg",
+    alt: "Skin fade with a buzz",
+    caption: "Skin fade + buzz",
+  },
+  {
+    src: "images/cut-06.jpg",
+    alt: "Fade in the gold-chair shop",
+    caption: "Shop fade",
+  },
+];
 
 const STORAGE_KEY = "kai-kuts-bookings";
 const DAY_NAMES = [
@@ -103,18 +136,103 @@ function init() {
   renderCalendar();
   renderTimes();
   updateSummary();
-  hydratePhotos();
+  initFaders();
   bindNav();
   bindBooking();
 }
 
-function hydratePhotos() {
-  document.querySelectorAll(".photo-slot[data-image]").forEach((slot) => {
-    const src = slot.getAttribute("data-image");
-    if (!src) return;
-    slot.style.backgroundImage = `url("${src}")`;
-    slot.classList.add("has-photo");
+function initFaders() {
+  const heroSlides = document.getElementById("hero-slides");
+  const workSlides = document.getElementById("work-slides");
+  const workDots = document.getElementById("work-dots");
+  const workCaption = document.getElementById("work-caption");
+
+  if (heroSlides) {
+    heroSlides.innerHTML = GALLERY.map(
+      (shot, index) => `
+        <div class="fade-slide${index === 0 ? " is-active" : ""}">
+          <img src="${shot.src}" alt="" />
+        </div>
+      `
+    ).join("");
+  }
+
+  if (workSlides) {
+    workSlides.innerHTML = GALLERY.map(
+      (shot, index) => `
+        <div class="fade-slide${index === 0 ? " is-active" : ""}">
+          <img src="${shot.src}" alt="${shot.alt}" />
+        </div>
+      `
+    ).join("");
+  }
+
+  if (workDots) {
+    workDots.innerHTML = GALLERY.map(
+      (shot, index) => `
+        <button
+          class="fade-dot${index === 0 ? " is-active" : ""}"
+          type="button"
+          data-fader-goto="${index}"
+          aria-label="${shot.caption}"
+        ></button>
+      `
+    ).join("");
+  }
+
+  if (workCaption) workCaption.textContent = GALLERY[0].caption;
+
+  document.querySelectorAll("[data-fader]").forEach((root) => bindFader(root));
+}
+
+function bindFader(root) {
+  const slides = [...root.querySelectorAll(".fade-slide")];
+  if (slides.length < 2) return;
+
+  const dots = [...root.querySelectorAll(".fade-dot")];
+  const caption = root.querySelector(".fade-caption");
+  const interval = Number(root.dataset.interval) || 5000;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0;
+  let timer = 0;
+
+  const show = (next) => {
+    slides[index].classList.remove("is-active");
+    dots[index]?.classList.remove("is-active");
+    index = (next + slides.length) % slides.length;
+    slides[index].classList.add("is-active");
+    dots[index]?.classList.add("is-active");
+    if (caption && GALLERY[index]) caption.textContent = GALLERY[index].caption;
+  };
+
+  const play = () => {
+    stop();
+    if (reduceMotion) return;
+    timer = window.setInterval(() => show(index + 1), interval);
+  };
+
+  const stop = () => {
+    window.clearInterval(timer);
+  };
+
+  root.querySelector("[data-fader-prev]")?.addEventListener("click", () => {
+    show(index - 1);
+    play();
   });
+  root.querySelector("[data-fader-next]")?.addEventListener("click", () => {
+    show(index + 1);
+    play();
+  });
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      show(Number(dot.dataset.faderGoto));
+      play();
+    });
+  });
+
+  root.addEventListener("mouseenter", stop);
+  root.addEventListener("mouseleave", play);
+  play();
 }
 
 function bindNav() {
@@ -355,7 +473,7 @@ function submitBooking() {
   bookings.push(booking);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings));
 
-  els.confirmBody.textContent = `${name}, ${service.name} is held for ${formatLongDate(state.date)} at ${formatTime(state.time)}. This is a local request until his booking app or phone number is plugged in.`;
+  els.confirmBody.textContent = `${name}, your ${service.name} appointment is held for ${formatLongDate(state.date)} at ${formatTime(state.time)}. This is a local request until the booking app or phone number is plugged in.`;
   els.modal.hidden = false;
   els.form.reset();
   state.serviceId = "";
