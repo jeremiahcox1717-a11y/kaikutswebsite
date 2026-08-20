@@ -59,7 +59,7 @@ const SHOP = {
 const GALLERY = [
   {
     src: "images/cut-01.jpg",
-    alt: "Burst fade pompadour with a clean skin blend",
+    alt: "Burst fade in the shop",
     caption: "Burst fade",
   },
   {
@@ -69,22 +69,22 @@ const GALLERY = [
   },
   {
     src: "images/cut-03.jpg",
-    alt: "Textured taper from the back",
+    alt: "Low taper from the back",
     caption: "Low taper",
   },
   {
     src: "images/cut-04.jpg",
-    alt: "High skin fade in the gold-chair shop",
-    caption: "High fade",
+    alt: "Low taper lineup",
+    caption: "Lineup",
   },
   {
     src: "images/cut-05.jpg",
-    alt: "Textured crop with a clean nape taper",
-    caption: "Taper + texture",
+    alt: "Skin fade with a buzz",
+    caption: "Skin fade + buzz",
   },
   {
     src: "images/cut-06.jpg",
-    alt: "Skin fade, side profile in the shop",
+    alt: "Fade in the gold-chair shop",
     caption: "Shop fade",
   },
 ];
