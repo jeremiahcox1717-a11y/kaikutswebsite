@@ -107,6 +107,38 @@ button {
   font-size: 0.86rem;
 }
 
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ig-link svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.ig-link:hover {
+  opacity: 0.75;
+}
+
+.ig-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.site-nav .ig-link {
+  color: #fff;
+  font-size: 0.92rem;
+}
+
 .nav-toggle {
   display: none;
   width: 44px;
@@ -254,6 +286,42 @@ button {
 .btn:hover,
 .btn:focus-visible {
   filter: brightness(0.92);
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.ig-link-hero {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.ig-link-hero svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ig-link-hero:hover {
+  opacity: 1;
+  background: #fff;
+  color: #000 !important;
+}
+
+.ig-link-card {
+  margin-top: 2px;
+  font-size: 1.05rem;
+}
+
+.ig-link-card svg {
+  width: 22px;
+  height: 22px;
 }
 
 .services,
@@ -535,6 +603,10 @@ button {
   border-bottom: 1.5px solid #fff;
 }
 
+.visit-card .ig-link {
+  border-bottom: 0;
+}
+
 .hours-list {
   list-style: none;
   margin: 0;
@@ -550,12 +622,24 @@ button {
   color: var(--muted);
 }
 
+.hours-list li.is-closed {
+  opacity: 0.55;
+}
+
 .site-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  gap: 16px;
   padding: 20px 0 48px;
   border-top: 1.5px solid #fff;
   color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-footer .ig-link {
+  color: #fff !important;
   font-size: 0.92rem;
 }
 
