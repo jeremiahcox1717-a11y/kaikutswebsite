@@ -272,7 +272,7 @@ function renderHours() {
   }).join("");
 
   const openDays = DAY_NAMES.filter((day) => SHOP.hours[day]);
-  if (openDays.length) {
+  if (openDays.length && els.hoursSummary) {
     els.hoursSummary.textContent = `${openDays[0].slice(0, 3)}–${openDays[openDays.length - 1].slice(0, 3)} · see hours`;
   }
 }
