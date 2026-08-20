@@ -2,12 +2,12 @@ const SHOP = {
   name: "Kai Kuts",
   hours: {
     Sunday: null,
-    Monday: null,
+    Monday: ["10:00", "19:00"],
     Tuesday: ["10:00", "19:00"],
     Wednesday: ["10:00", "19:00"],
     Thursday: ["10:00", "19:00"],
     Friday: ["10:00", "19:00"],
-    Saturday: ["09:00", "16:00"],
+    Saturday: null,
   },
   slotMinutes: 30,
   services: [
@@ -265,11 +265,22 @@ function bindBooking() {
 }
 
 function renderHours() {
-  els.hoursList.innerHTML = DAY_NAMES.map((day) => {
-    const hours = SHOP.hours[day];
-    const value = hours ? `${formatTime(hours[0])} – ${formatTime(hours[1])}` : "Closed";
-    return `<li><span>${day.slice(0, 3)}</span><span>${value}</span></li>`;
-  }).join("");
+  const order = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  els.hoursList.innerHTML = order
+    .map((day) => {
+      const hours = SHOP.hours[day];
+      const value = hours ? `${formatTime(hours[0])} – ${formatTime(hours[1])}` : "Closed";
+      return `<li class="${hours ? "" : "is-closed"}"><span>${day}</span><span>${value}</span></li>`;
+    })
+    .join("");
 
   const openDays = DAY_NAMES.filter((day) => SHOP.hours[day]);
   if (openDays.length && els.hoursSummary) {
