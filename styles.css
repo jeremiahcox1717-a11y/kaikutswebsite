@@ -161,6 +161,7 @@ button {
   align-items: center;
   text-align: center;
   padding: 56px 20px 80px;
+  overflow-x: clip;
 }
 
 .kicker {
@@ -186,16 +187,86 @@ button {
   margin-bottom: 36px;
 }
 
+.cut-stage {
+  position: relative;
+  width: min(820px, 100%);
+  display: grid;
+  place-items: center;
+  margin: 0 0 36px;
+  padding: 42px 72px;
+}
+
+.cut-collage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cut-collage img {
+  position: absolute;
+  width: 31%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  opacity: 0.78;
+  filter: brightness(0.92) contrast(1.06) saturate(1.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.cut-collage img:nth-child(1) {
+  top: 0;
+  left: 2%;
+  object-position: center 20%;
+  transform: rotate(-11deg);
+}
+
+.cut-collage img:nth-child(2) {
+  top: -2%;
+  right: 3%;
+  object-position: center 15%;
+  transform: rotate(9deg);
+}
+
+.cut-collage img:nth-child(3) {
+  top: 36%;
+  left: -2%;
+  object-position: center 25%;
+  transform: rotate(-6deg);
+}
+
+.cut-collage img:nth-child(4) {
+  top: 34%;
+  right: -3%;
+  object-position: center 18%;
+  transform: rotate(7deg);
+}
+
+.cut-collage img:nth-child(5) {
+  bottom: 0;
+  left: 8%;
+  object-position: center 22%;
+  transform: rotate(8deg);
+}
+
+.cut-collage img:nth-child(6) {
+  bottom: -1%;
+  right: 6%;
+  object-position: center 16%;
+  transform: rotate(-8deg);
+}
+
 .cut-frame {
   position: relative;
-  width: min(560px, 100%);
+  z-index: 2;
+  width: min(480px, 72%);
   aspect-ratio: 1;
-  margin: 0 0 32px;
+  margin: 0;
   overflow: hidden;
   border-radius: var(--radius);
   background: #000;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 1px #000, 0 24px 60px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 1px #000, 0 28px 70px rgba(0, 0, 0, 0.7), 0 0 0 12px rgba(0, 0, 0, 0.35);
 }
 
 .cut-slideshow,
@@ -680,6 +751,23 @@ body.nav-open {
   .book-services,
   .fields {
     grid-template-columns: 1fr;
+  }
+
+  .cut-stage {
+    padding: 30px 40px;
+  }
+
+  .cut-collage img {
+    width: 33%;
+  }
+
+  .cut-collage img:nth-child(3),
+  .cut-collage img:nth-child(4) {
+    display: none;
+  }
+
+  .cut-frame {
+    width: min(440px, 78%);
   }
 
   .nav-toggle {
