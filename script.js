@@ -355,7 +355,7 @@ function submitBooking() {
   bookings.push(booking);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings));
 
-  els.confirmBody.textContent = `${name}, ${service.name} is held for ${formatLongDate(state.date)} at ${formatTime(state.time)}. This is a local request until his booking app or phone number is plugged in.`;
+  els.confirmBody.textContent = `${name}, ${service.name} is held for ${formatLongDate(state.date)} at ${formatTime(state.time)}. We’ll confirm by phone or message once the shop number is on the site.`;
   els.modal.hidden = false;
   els.form.reset();
   state.serviceId = "";
