@@ -3,30 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kai Kuts — Precision Fades</title>
+    <title>Kai Kuts</title>
     <meta
       name="description"
-      content="Kai Kuts. Skin fades, burst fades, and clean line-ups. Book an appointment."
+      content="Kai Kuts — precision fades in Port Coquitlam. Book an appointment."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=look1" />
+    <link rel="stylesheet" href="styles.css?v=sharp1" />
   </head>
   <body>
     <header class="site-header" id="top">
-      <div class="header-inner">
-        <a class="logo" href="#top">
-          <span class="logo-mark" aria-hidden="true">K</span>
-          <span class="logo-text">
-            <span>Kai Kuts</span>
-            <small>Port Coquitlam</small>
-          </span>
-        </a>
+      <div class="wrap header-inner">
+        <a class="logo" href="#top">Kai Kuts</a>
         <button
           class="nav-toggle"
           type="button"
@@ -38,7 +32,7 @@
           <span></span>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
-          <a href="#work">Cuts</a>
+          <a href="#work">Work</a>
           <a href="#services">Services</a>
           <a href="#visit">Visit</a>
           <a class="nav-cta" href="#book">Book an Appointment</a>
@@ -48,126 +42,117 @@
 
     <main>
       <section class="hero" id="work">
-        <div class="hero-copy">
-          <p class="eyebrow">Barbering · By appointment</p>
-          <h1>Kai Kuts</h1>
-          <p class="lede">
-            Skin fades, burst fades, and line-ups. One chair, no rush.
-          </p>
-          <a class="btn btn-primary" href="#book">Book an Appointment</a>
-        </div>
-
+        <p class="kicker">Port Coquitlam</p>
+        <h1>The cut speaks.</h1>
         <figure class="cut-frame" aria-label="Haircut gallery">
-          <div class="cut-slideshow" aria-hidden="true">
-            <img src="images/cut-01.jpg" alt="" />
-            <img src="images/cut-02.jpg" alt="" />
-            <img src="images/cut-03.jpg" alt="" />
-            <img src="images/cut-04.jpg" alt="" />
-            <img src="images/cut-05.jpg" alt="" />
-            <img src="images/cut-06.jpg" alt="" />
+          <div class="cut-slideshow">
+            <img src="images/cut-01.jpg" alt="Burst fade in the shop" />
+            <img src="images/cut-02.jpg" alt="Skin fade, side profile" />
+            <img src="images/cut-03.jpg" alt="Low taper from the back" />
+            <img src="images/cut-04.jpg" alt="Low taper lineup" />
+            <img src="images/cut-05.jpg" alt="Skin fade with a buzz" />
+            <img src="images/cut-06.jpg" alt="Fade in the shop" />
           </div>
-          <figcaption class="cut-dots" aria-hidden="true">
+          <div class="cut-dots" aria-hidden="true">
             <span></span><span></span><span></span><span></span><span></span><span></span>
-          </figcaption>
+          </div>
         </figure>
+        <a class="btn" href="#book">Book an Appointment</a>
       </section>
 
-      <section class="services" id="services">
+      <section class="services wrap" id="services">
         <div class="section-head">
-          <p class="eyebrow">The menu</p>
+          <p class="kicker">Menu</p>
           <h2>Services</h2>
         </div>
         <div class="service-grid" id="service-grid"></div>
       </section>
 
       <section class="booking" id="book">
-        <div class="booking-card">
-          <div class="booking-intro">
-            <p class="eyebrow">Reserve the chair</p>
-            <h2>Book an appointment</h2>
-            <p>
-              Pick a service, a day, and a time. You’ll get a confirmation on
-              this page.
-            </p>
-          </div>
-
-          <form class="booking-form" id="booking-form" novalidate>
-            <fieldset class="step">
-              <legend>1. Service</legend>
-              <div class="book-services" id="book-services" role="list"></div>
-              <p class="field-error" data-error-for="service"></p>
-            </fieldset>
-
-            <div class="booking-split">
-              <fieldset class="step">
-                <legend>2. Date</legend>
-                <div class="calendar" id="calendar">
-                  <div class="calendar-head">
-                    <button type="button" id="cal-prev" aria-label="Previous month">
-                      ‹
-                    </button>
-                    <h3 id="cal-label"></h3>
-                    <button type="button" id="cal-next" aria-label="Next month">
-                      ›
-                    </button>
-                  </div>
-                  <div class="calendar-weekdays" aria-hidden="true">
-                    <span>Su</span><span>Mo</span><span>Tu</span><span>We</span>
-                    <span>Th</span><span>Fr</span><span>Sa</span>
-                  </div>
-                  <div class="calendar-days" id="cal-days"></div>
-                </div>
-                <p class="field-error" data-error-for="date"></p>
-              </fieldset>
-
-              <fieldset class="step">
-                <legend>3. Time</legend>
-                <p class="slot-hint" id="slot-hint">Choose a date to see times.</p>
-                <div class="time-slots" id="time-slots"></div>
-                <p class="field-error" data-error-for="time"></p>
-              </fieldset>
+        <div class="wrap">
+          <div class="booking-card">
+            <div class="booking-intro">
+              <p class="kicker">The book</p>
+              <h2>Book an appointment</h2>
+              <p>Choose a service, pick a day, lock a time.</p>
             </div>
 
-            <fieldset class="step">
-              <legend>4. Your details</legend>
-              <div class="fields">
-                <label>
-                  Name
-                  <input type="text" name="name" autocomplete="name" required />
-                </label>
-                <label>
-                  Phone
-                  <input type="tel" name="phone" autocomplete="tel" required />
-                </label>
-                <label class="full">
-                  Email <span class="optional">(optional)</span>
-                  <input type="email" name="email" autocomplete="email" />
-                </label>
-                <label class="full">
-                  Notes <span class="optional">(optional)</span>
-                  <textarea
-                    name="notes"
-                    rows="3"
-                    placeholder="Fade preference, beard work, kid’s age…"
-                  ></textarea>
-                </label>
+            <form class="booking-form" id="booking-form" novalidate>
+              <fieldset class="step">
+                <legend>Service</legend>
+                <div class="book-services" id="book-services" role="list"></div>
+                <p class="field-error" data-error-for="service"></p>
+              </fieldset>
+
+              <div class="booking-split">
+                <fieldset class="step">
+                  <legend>Date</legend>
+                  <div class="calendar" id="calendar">
+                    <div class="calendar-head">
+                      <button type="button" id="cal-prev" aria-label="Previous month">
+                        ‹
+                      </button>
+                      <h3 id="cal-label"></h3>
+                      <button type="button" id="cal-next" aria-label="Next month">
+                        ›
+                      </button>
+                    </div>
+                    <div class="calendar-weekdays" aria-hidden="true">
+                      <span>Su</span><span>Mo</span><span>Tu</span><span>We</span>
+                      <span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div class="calendar-days" id="cal-days"></div>
+                  </div>
+                  <p class="field-error" data-error-for="date"></p>
+                </fieldset>
+
+                <fieldset class="step">
+                  <legend>Time</legend>
+                  <p class="slot-hint" id="slot-hint">Choose a date to see times.</p>
+                  <div class="time-slots" id="time-slots"></div>
+                  <p class="field-error" data-error-for="time"></p>
+                </fieldset>
               </div>
-              <p class="field-error" data-error-for="details"></p>
-            </fieldset>
 
-            <div class="booking-foot">
-              <p class="summary" id="booking-summary">Select a service to start.</p>
-              <button class="btn btn-primary" type="submit">
-                Book an Appointment
-              </button>
-            </div>
-          </form>
+              <fieldset class="step">
+                <legend>Your details</legend>
+                <div class="fields">
+                  <label>
+                    Name
+                    <input type="text" name="name" autocomplete="name" required />
+                  </label>
+                  <label>
+                    Phone
+                    <input type="tel" name="phone" autocomplete="tel" required />
+                  </label>
+                  <label class="full">
+                    Email <span class="optional">(optional)</span>
+                    <input type="email" name="email" autocomplete="email" />
+                  </label>
+                  <label class="full">
+                    Notes <span class="optional">(optional)</span>
+                    <textarea
+                      name="notes"
+                      rows="3"
+                      placeholder="Fade preference, beard work, kid’s age…"
+                    ></textarea>
+                  </label>
+                </div>
+                <p class="field-error" data-error-for="details"></p>
+              </fieldset>
+
+              <div class="booking-foot">
+                <p class="summary" id="booking-summary">Select a service to start.</p>
+                <button class="btn" type="submit">Book an Appointment</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
-      <section class="visit" id="visit">
+      <section class="visit wrap" id="visit">
         <div class="section-head">
-          <p class="eyebrow">The shop</p>
+          <p class="kicker">Shop</p>
           <h2>Hours &amp; contact</h2>
         </div>
         <div class="visit-grid">
@@ -193,22 +178,20 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <strong>Kai Kuts</strong>
-      <p class="copyright">© <span id="year"></span> · Book an appointment</p>
+    <footer class="wrap site-footer">
+      <span>Kai Kuts</span>
+      <span class="muted">© <span id="year"></span></span>
     </footer>
 
     <div class="modal" id="confirm-modal" hidden>
       <div class="modal-card" role="dialog" aria-labelledby="confirm-title" aria-modal="true">
-        <p class="eyebrow">You’re on the book</p>
+        <p class="kicker">You’re on the book</p>
         <h2 id="confirm-title">Appointment requested</h2>
         <p id="confirm-body"></p>
-        <button class="btn btn-primary" type="button" id="confirm-close">
-          Back to the site
-        </button>
+        <button class="btn" type="button" id="confirm-close">Back to the site</button>
       </div>
     </div>
 
-    <script src="script.js?v=look1"></script>
+    <script src="script.js?v=sharp1"></script>
   </body>
 </html>
